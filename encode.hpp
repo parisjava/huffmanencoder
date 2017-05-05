@@ -8,7 +8,7 @@ private:
   bool valid;
 public:
   Node(int c, char ch);
-  Node(int c, bool v);
+  Node(int c);
   void setLeft(Node* l);
   void setRight(Node* r);
   bool isValid();
