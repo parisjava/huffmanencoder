@@ -18,18 +18,18 @@ void Node::setRight(Node* r) {
   right = r;
 }
 
-bool Node::isValid() {
+bool Node::isValid() const {
   return valid;
 }
 
-int Node::getCount() {
+int Node::getCount() const {
   return count;
 }
 
-char Node::getCharacter() {
+char Node::getCharacter() const {
   return character;
 }
 
-bool Node::operator<(Node& node) {
-  return (count < node.count);
+bool Node::operator<(const Node& node) const {
+  return (count < node.getCount());
 }

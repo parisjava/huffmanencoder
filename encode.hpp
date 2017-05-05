@@ -11,8 +11,8 @@ public:
   Node(int c);
   void setLeft(Node* l);
   void setRight(Node* r);
-  bool isValid();
-  int getCount();
-  char getCharacter();
-  bool operator<(Node& next);
+  bool isValid() const;
+  int getCount() const;
+  char getCharacter() const;
+  bool operator<(const Node& next) const;
 };
