@@ -29,3 +29,7 @@ int Node::getCount() {
 char Node::getCharacter() {
   return character;
 }
+
+bool Node::operator<(Node& node) {
+  return (count < node.count);
+}

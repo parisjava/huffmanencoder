@@ -14,4 +14,5 @@ public:
   bool isValid();
   int getCount();
   char getCharacter();
+  bool operator<(Node& next);
 };
