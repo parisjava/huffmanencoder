@@ -9,6 +9,7 @@ private:
 public:
   Node(int c, char ch);
   Node(int c);
+  ~Node();
   void setLeft(Node* l);
   void setRight(Node* r);
   bool isValid() const;

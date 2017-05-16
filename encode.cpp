@@ -10,6 +10,11 @@ Node::Node(int c) : count(c), character('\0'), valid(false) {
   right = nullptr;
 }
 
+Node::~Node() {
+  delete left;
+  delete right;
+}
+
 void Node::setLeft(Node* l) {
   left = l;
 }
