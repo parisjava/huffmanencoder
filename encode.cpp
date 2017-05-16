@@ -12,14 +12,16 @@ Node::Node(int c) : count(c), character('\0'), valid(false) {
 
 Node::~Node() {
   delete left;
+  left = nullptr;
   delete right;
+  right = nullptr;
 }
 
-void Node::setLeft(Node* l) {
+void Node::setLeft(const Node* l) {
   left = l;
 }
 
-void Node::setRight(Node* r) {
+void Node::setRight(const Node* r) {
   right = r;
 }
 
