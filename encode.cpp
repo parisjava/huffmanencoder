@@ -40,3 +40,16 @@ char Node::getCharacter() const {
 bool Node::operator<(const Node& node) const {
   return (count < node.getCount());
 }
+
+void Node::printTree() const {
+  printTree("");
+}
+
+void Node::printTree(std::string s) const {
+  if (valid) {
+    std::cout << character << " : " << s << '\n';
+    return;
+  }
+  left->printTree(s + "1");
+  right->printTree(s + "0");
+}

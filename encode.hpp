@@ -1,3 +1,5 @@
+#include <string>
+#include <iostream>
 
 class Node {
 private:
@@ -6,6 +8,7 @@ private:
   int count;
   char character;
   bool valid;
+  void printTree(std::string s) const;
 public:
   Node(int c, char ch);
   Node(int c);
@@ -16,12 +19,13 @@ public:
   int getCount() const;
   char getCharacter() const;
   bool operator<(const Node& next) const;
+  void printTree() const;
 };
 
 class CompareNode {
 public:
   bool operator() (Node* left, Node* right) {
-    return *left < *right;
+    return *right < *left;
   }
   
 };
