@@ -3,14 +3,16 @@
 #include <queue>
 #include <functional>
 #include <vector>
+#include "input.hpp"
 int main(void) {
   
   std::priority_queue<Node*, std::vector<Node*>, CompareNode > p;
   int characters[255] = {};
-  characters[55] = 15;
-  characters[57] = 10;
-  characters[56] =  25;
-  
+  /*for (int x = 48; x < 58; x++) {
+    characters[x] = x;
+  }
+  characters[48] = 2000;*/
+  readDocument("test.txt", characters);
   for (int x = 0; x< 255; x++) {
     if (characters[x] == 0) {
       continue;
