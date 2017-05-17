@@ -53,3 +53,16 @@ void Node::printTree(std::string s) const {
   left->printTree(s + "1");
   right->printTree(s + "0");
 }
+
+void Node::fillCode(std::string codes[255]) const {
+  fillCode(codes, "");
+}
+
+void Node::fillCode(std::string codes[255], std::string s) const {
+  if (valid) {
+    codes[(int)character] = s;
+    return;
+  }
+  left->printTree(s + "1");
+  right->printTree(s + "0");
+}

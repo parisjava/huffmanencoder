@@ -9,6 +9,7 @@ private:
   char character;
   bool valid;
   void printTree(std::string s) const;
+  void fillCode(std::string codes[255], std::string s) const;
 public:
   Node(int c, char ch);
   Node(int c);
@@ -20,6 +21,7 @@ public:
   char getCharacter() const;
   bool operator<(const Node& next) const;
   void printTree() const;
+  void fillCode(std::string codes[255]) const;
 };
 
 class CompareNode {
