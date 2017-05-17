@@ -63,6 +63,6 @@ void Node::fillCode(std::string codes[255], std::string s) const {
     codes[(int)character] = s;
     return;
   }
-  left->printTree(s + "1");
-  right->printTree(s + "0");
+  left->fillCode(codes, s + "1");
+  right->fillCode(codes, s + "0");
 }

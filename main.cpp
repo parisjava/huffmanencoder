@@ -7,13 +7,10 @@
 int main(void) {
   
   std::priority_queue<Node*, std::vector<Node*>, CompareNode > p;
-  int characters[255] = {};
-  /*for (int x = 48; x < 58; x++) {
-    characters[x] = x;
-  }
-  characters[48] = 2000;*/
+  int characters[256] = {};
+  std::string encodings[256] = {};
   readDocument("test.txt", characters);
-  for (int x = 0; x< 255; x++) {
+  for (int x = 0; x< 256; x++) {
     if (characters[x] == 0) {
       continue;
     }
@@ -32,7 +29,8 @@ int main(void) {
   }
   Node* tree = p.top();
   p.pop();
-  tree->printTree();
+  tree->fillCode(encodings);
+  compress("../csf/hw7/gcc.trace", "out.txt" , encodings);
   delete tree;
   return 0;
 }
